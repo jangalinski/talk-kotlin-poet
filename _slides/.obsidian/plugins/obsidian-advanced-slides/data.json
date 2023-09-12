@@ -3,7 +3,7 @@
   "autoReload": true,
   "exportDirectory": "/export",
   "enableChalkboard": false,
-  "enableOverview": false,
+  "enableOverview": true,
   "enableMenu": true,
   "enablePointer": true,
   "enableTimeBar": false,
@@ -13,9 +13,9 @@
   "transitionSpeed": "normal",
   "controls": true,
   "progress": true,
-  "slideNumber": false,
+  "slideNumber": true,
   "showGrid": false,
   "autoComplete": "inPreview",
   "paneMode": "split",
-  "motm": "2023-08-07T10:57:49.227Z"
+  "motm": "2023-09-05T07:02:59.081Z"
 }

@@ -1,0 +1,43 @@
+{
+  "namespace": "io.github.jangalinski",
+  "protocol": "CodeTalksQueries",
+  "types": [
+    {
+      "name": "CodeTalksTalk",
+      "type": "record",
+      "fields": [
+        {
+          "name": "name",
+          "type": "string"
+        },
+        {
+          "name": "description",
+          "type": "string"
+        }
+      ]
+    }
+  ],
+  "messages": {
+    "findTalksByKeyword": {
+      "request": [
+        {
+          "name": "query",
+          "type": {
+            "name": "FindTalksByKeywordQuery",
+            "type": "record",
+            "fields": [
+              {
+                "name": "keyword",
+                "type": "string"
+              }
+            ]
+          }
+        }
+      ],
+      "response": {
+        "type": "array",
+        "items": "CodeTalksTalk"
+      }
+    }
+  }
+}

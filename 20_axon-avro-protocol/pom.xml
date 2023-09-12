@@ -1,0 +1,75 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>io.github.jangalinski.talks</groupId>
+    <artifactId>kotlin-meta-programming-parent</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+  </parent>
+
+  <artifactId>20_axon-avro-protocol</artifactId>
+  <description>A useful application of code generation.</description>
+
+  <properties>
+    <avro.version>1.11.2</avro.version>
+    <!--    EMPTY-->
+  </properties>
+
+  <dependencies>
+    <dependency>
+      <groupId>org.apache.avro</groupId>
+      <artifactId>avro</artifactId>
+      <version>${avro.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.avro</groupId>
+      <artifactId>avro-ipc</artifactId>
+      <version>${avro.version}</version>
+      <scope>provided</scope>
+    </dependency>
+
+    <dependency>
+      <groupId>org.axonframework</groupId>
+      <artifactId>axon-messaging</artifactId>
+      <version>4.8.0</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.jetbrains.kotlin</groupId>
+      <artifactId>kotlin-compiler</artifactId>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.github.tschuchortdev</groupId>
+      <artifactId>kotlin-compile-testing</artifactId>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+
+  <build>
+    <plugins>
+
+      <plugin>
+        <groupId>org.apache.avro</groupId>
+        <artifactId>avro-maven-plugin</artifactId>
+        <version>${avro.version}</version>
+        <configuration>
+          <customConversions>org.apache.avro.Conversions$UUIDConversion</customConversions>
+          <stringType>String</stringType>
+          <enableDecimalLogicalType>true</enableDecimalLogicalType>
+          <createSetters>false</createSetters>
+          <outputDirectory>${project.build.directory}/generated-sources/avro</outputDirectory>
+          <sourceDirectory>${project.basedir}/src/main/resources/avro</sourceDirectory>
+        </configuration>
+        <executions>
+          <execution>
+            <goals>
+              <goal>protocol</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
+</project>
