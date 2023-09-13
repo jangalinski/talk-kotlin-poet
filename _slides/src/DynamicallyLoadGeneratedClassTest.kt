@@ -1,4 +1,4 @@
-package io.github.jangalinski.talks
+package io.github.jangalinski.talks._spike
 
 import com.squareup.kotlinpoet.FileSpec
 import com.squareup.kotlinpoet.FunSpec

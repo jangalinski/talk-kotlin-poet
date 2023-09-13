@@ -161,8 +161,12 @@
       "obsidian-advanced-slides:Show Slide Preview": false
     }
   },
-  "active": "e256d8d28d265ae3",
+  "active": "29b3e72326854c54",
   "lastOpenFiles": [
+    "images/no understanding-small.jpg",
+    "src/GenerateHelloWorldImplTest.kt",
+    "src/DynamicallyLoadGeneratedClassTest.kt",
+    "src",
     "no understanding-small.jpg",
     "no understanding.jpg.sb-e54d77f8-c5A6jV",
     "no understanding.jpg",
@@ -176,7 +180,6 @@
     "images/types-of-meta-programming.svg",
     "images/bg/kotlin-color-bg.svg",
     "images/kotlin-color-bg.svg",
-    "images/mermaid-diagram-2023-09-12-225532.svg",
     "images/bg-svg",
     "images/Neuer Ordner",
     "images/bg",

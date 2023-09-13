@@ -1,43 +1,25 @@
+
+
 {
-  "namespace": "io.github.jangalinski",
+  "namespace": "io.github.jangalinski.talks.avro",
   "protocol": "CodeTalksQueries",
   "types": [
     {
       "name": "CodeTalksTalk",
       "type": "record",
       "fields": [
-        {
-          "name": "name",
-          "type": "string"
-        },
-        {
-          "name": "description",
-          "type": "string"
-        }
+        {"name": "name", "type": "string"},
+        {"name": "description", "type": "string"}
       ]
     }
   ],
   "messages": {
     "findTalksByKeyword": {
+      "doc": "Query code talk talk by keyword.",
       "request": [
-        {
-          "name": "query",
-          "type": {
-            "name": "FindTalksByKeywordQuery",
-            "type": "record",
-            "fields": [
-              {
-                "name": "keyword",
-                "type": "string"
-              }
-            ]
-          }
-        }
+        {"name": "keyword", "type": "string"}
       ],
-      "response": {
-        "type": "array",
-        "items": "CodeTalksTalk"
-      }
+      "response": { "type": "array", "items": "CodeTalksTalk"}
     }
   }
 }
