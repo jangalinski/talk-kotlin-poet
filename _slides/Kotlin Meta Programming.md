@@ -1,5 +1,5 @@
 ---
-title: "Kotlin Meta Programming - Code Generation with Kotlin Poet"
+title: Kotlin Meta Programming - Code Generation with Kotlin Poet
 center: true
 theme: night
 transition: slide
@@ -26,25 +26,21 @@ note:
 
 --
 <!-- .slide: data-auto-animate -->
+
 ### Girls & Boys Day 2023
 
 ![[dinner-process.svg]]
 
-ChatGPT powered _what to cook for dinner?_ process
+ChatGPT powered "what to cook for dinner?" process <!-- element class="fragment" -->
+
+<small>https://github.com/holunda-io/camunda-8-connector-gpt</small> <!-- element class="fragment" -->
 
 note: girls and boys day 
 - fuck
 - camunda process & chat gpt
 -  if kids can do this --- managers can two as well
--  but: does it work? is the receipe correct? are all items on the grocery shopping list?
-
---
-<!-- .slide: data-auto-animate -->
-### Girls & Boys Day 2023
-
-![[dinner-process.svg]]
-
-<small>https://github.com/holunda-io/camunda-8-connector-gpt</small>
+-  but: does it work? is the recipe correct? are all items on the grocery shopping list? Does it taste well?
+- How do I measure the grade of fulfillment?
 
 --
 
@@ -96,23 +92,31 @@ notes:
 + ... before I even owned the machine
 
 --
-<!-- slide bg="[[c64-empty.svg]]" -->
+<!-- slide bg="[[c64-empty.svg]]" style="color:#6C5FB5"-->
 
-<grid drop="left" style="color:#6C5FB5">
+<split even>
+
+<div style="font-size:24pt">
+
+<p>&nbsp;</p>
+
 
 + Senior Consultant [@HolisticonAG](https://holisticon.de)
 + 20+ years of industry experience
 + Kotlin - Fan
-+ ... Backend/spring boot - no Android
-+ ... prefers maven over gradle
-+ ... uses light mode
+  + ... Backend/Spring Boot - no Android
+  + ... prefers maven over gradle
+  + ... uses light mode
 
-</grid>
+</div>
 
-<grid drop="right">
+<div>
 ![[jg-comic.svg]]
 [about.me/jangalinski](https://about.me/jangalinski)
-</grid>
+</div>
+
+</split>
+
 
 ---
 
@@ -120,15 +124,17 @@ notes:
 
 <grid drag="70 100" drop="right">
 
+<i class="fas fa-clipboard-list fa-4x"></i>
+
 ### Agenda
 
-* What is Meta Programming?
-* How does it work? - Live Coding
-* Where to go from here?
++ What is Meta Programming?
++ How does it work? - Live Coding
++ Where to go from here?
 
 </grid>
 
---
+---
 
 <!-- slide bg="[[images/meta-taal-lake.jpg]]" -->
 
@@ -157,32 +163,12 @@ notes:
 
 ![[types-of-meta-programming.svg|600]]
 
-<grid  drag="30 38" drop="-18 13"   opacity="0.4" bg="lightcoral"     /><!-- element class="fragment" -->
+<grid  drag="30 38" drop="-18 13"   opacity="0.4" bg="lightcoral" /><!-- element class="fragment" -->
 
 
 note:
 
 * Basically: Reflection vs. Code Generation
-* quadrantChart
-
-  x-axis Runtime -->Compile Time
-  y-axis Byte Code -->Source Code
-  quadrant-1 Code Generation
-  quadrant-2 NOPE
-  quadrant-3 Reflection
-
-  OpenAPI/Swagger: [0.7,0.8]
-  Avro: [0.6,0.9]
-  WSDL/Soap: [0.75,0.9]
-  Mapstruct: [0.8, 0.7]
-
-  Spring Boot: [0.1,0.2]
-  CGLib: [0.3,0.3]
-
-  GraalVM: [0.8,0.2]
-  Lombok: [0.75, 0.3]
-  Byte Buddy: [0.7,0.1]
-  ASM: [0.9,0.2]
 
 
 
@@ -190,23 +176,30 @@ note:
 
 ### Types of Source Code Generators
 
-- Annotation Processing
-  -  mapstruct
-- Command Line Console
-  - swagger
-- Build Plugins (maven, gradle)
-  - swagger, avro 
++ Annotation Processing
+  +  _mapstruct_
++ Command Line Console
+  + _open-api_
++ Build Plugins (maven, gradle)
+  + _open-api_
+  + _avro_
 
 --
 
 ### Tools for Source Code Generation
 
-- Basically, create an ASCII file
-- Popular: Template Engines (mustache, velocity, ...)
-+ Or ... __Kotlin Poet__
++ Well ... create an ASCII file
++ Popular: Template Engines
+    + _mustache_
+    + _velocity_
++ Language Model API
+  + _~~sun code model~~_
+  + _spoon_
+  + or: __Kotlin Poet__ 
 
 note:
 
+* Templating vs language model
 * Tools:
   * sun.codemodel
   * roaster
@@ -233,6 +226,11 @@ note:
 @get:JsonProperty("{{{baseName}}}", required = true){{#isInherited}} override{{/isInherited}} {{>modelMutable}} {{{name}}}: {{#isEnum}}{{#isArray}}{{baseType}}<{{/isArray}}{{#isInherited}}{{parent}}.{{/isInherited}}{{^isInherited}}{{classname}}.{{/isInherited}}{{{nameInCamelCase}}}{{#isArray}}>{{/isArray}}{{/isEnum}}{{^isEnum}}{{{dataType}}}{{/isEnum}}{{#isNullable}}?{{/isNullable}}{{#defaultValue}} = {{{.}}}{{/defaultValue}}
 
 ```
+
+<grid drop="25 10" style="color:red;font-size:400pt">
+<bold>&#10060;</bold>
+</grid><!-- element class="fragment" -->
+
 ---
 <!-- slide bg="[[kotlin-bg-black.svg]]" -->
 
@@ -250,173 +248,110 @@ note:
 https://square.github.io/kotlinpoet/
 </grid>
 
+note:
+
+* from square
+* okhttp client
+* moshi
+* Non Linear generation
+
+--
+
+## Kotlin Poet
+
+> is a Kotlin and Java API for generating `.kt` source files. <br/>
+> Source file generation can be useful when doing things such as annotation processing or interacting with metadata files (e.g., database schemas, protocol formats). <br/>
+> By generating code, you eliminate the need to write boilerplate while also keeping a single source of truth for the metadata.
 
 ---
 
-Kotlin Poet
+<!-- slide bg="[[image - demo.svg]]" -->
 
-Non Linear generation
+<grid drop="bottom" drag="100 30">
+# Demo Time
+</grid>
+
 
 ---
 
-#### Should I use Kotlin Poet for code generation?
+<!-- slide bg="[[kotlin-bg-black.svg]]" -->
 
-<div style="height:480px">
-<canvas data-chart="pie">
-<!--
-{
-  "data" : {
-    "datasets": [
-       {
-           "data":[40,10],
-           "backgroundColor": [ "blue","yellow" ]
-       }
-   ],
-   "labels": [
-        "YES",
-        "Also YES, but in yellow"
-    ]
-  }
-}
--->
-</canvas>
+<grid drag="70 100" drop="right">
+
+<i class="fas fa-lightbulb fa-4x"></i>
+
+## Conclusion
+
+</grid>
+
+--
+
+## Considerations
+
++ Creating and maintaining a code generator is not free of cost
++ Carefully choose and analyse your use case/scenario
++ Your code base can benefit from 
+  + Less Boilerplate code
+  + unified way of approaching problems
+  + reduce mental overload 
+
+note:
+
+* solve problems once, explain solution to team, never worry again
+
+--
+
+## Best practices
+
++ Generator implementation should be independent of generator type
++ API of generated code is more important than readability 
++ Avoid increase of build time by cashing/hashing
++ _Use dedicated project sub-modules for code generation_
+
+note:
+
+* 1 build a core lib with custom API  that can consume specific input and output specific result, independent of annotation processing, maven plugin, ...
+* 2 We are generating the code, so duplications, redundant setups and complexity/LoC per file are not that important as long as the API abstraction is fine. Use lambdas, extensions, ....
+* 3  If the input (specs, annotated classes, ...) did not change, we don't need to regenerate
+* 4 generate your avro client code in a maven sub-module, than just use that module from your application code.
+
+--
+
+#### Should you use Kotlin Poet for code generation?
+
+<split even >
+
+<div>
+![[pie-yellow.svg]]
 </div>
----
 
-<canvas class="stretch" data-chart="line">
-My first dataset, 65, 59, 80, 81, 56, 55, 40
-<!-- This is a comment that will be ignored -->
-My second dataset, 28, 48, 40, 19, 86, 27, 90
-<!--
-{
- "data" : {
-  "labels" : ["Enero", "Febrero", "Marzo", "Avril", "Mayo", "Junio", "Julio"],
-  "datasets" : [{ "borderColor": "#0f0", "borderDash": ["5","10"] }, { "borderColor": "#0ff" } ]
- }
-}
--->
-</canvas>
+<table>
+<tr>
+<td style="color:#FF6384;font-size:100pt">&#9632;</td>
+<td>YES!</td>
+</tr>
 
----
-  
-## Pie chart
+<tr>
+<td style="color:#FFCD56;font-size:100pt">&#9632;</td>
+<td>Also YES! <small>(but in yellow)</small> </td>
+</tr>
+</table>
 
-<div style="height:600px">
-<canvas data-chart="pie">
-,Black, Red, Green, Yellow
-My first dataset, 40, 40, 20, 6
-My second dataset, 45, 40, 25, 4
-</canvas>
-</div>
-
----
-# Links
-
-* [kotlin poet](https://square.github.io/kotlinpoet/) - KotlinPoet is a Kotlin and Java API for generating .kt source files. Source file generation can be useful when doing things such as annotation processing or interacting with metadata files (e.g., database schemas, protocol formats). By generating code, you eliminate the need to write boilerplate while also keeping a single source of truth for the metadata.
-* [c64 emulator](https://c64emulator.111mb.de/index.php?site=home&group=c64)
-* [obsidian - advanced slides](https://mszturc.github.io/obsidian-advanced-slides/)
+</split>
 
 ---
 
-<!-- slide bg="[[no understanding.jpg]]" -->
+<!-- slide bg="[[no understanding-small.jpg]]" -->
 
-QUESTIONS?
+# QUESTIONS?
+
 
 ---
 
-# Unstructured
+&#8594; | Some useful Links
+------------------------- | ------------
+presentation & demo | [github.com/jangalinski/talk-kotlin-poet](https://github.com/jangalinski/talk-kotlin-poet)
+kotlin poet @square | [square.github.io/kotlinpoet](https://square.github.io/kotlinpoet/)
+obsidian.md - advanced slides | [mszturc.github.io/obsidian-advanced-slides](https://mszturc.github.io/obsidian-advanced-slides/)
+c64 emulator/js | [c64emulator.111mb.de](https://c64emulator.111mb.de/)
 
-  
-
-Introduction
-
-  
-
-
-Thoughts on Code generation vs ai 
-
-  
-
-Templating vs language model 
-
---
-
-<canvas data-chart="line" >
-<!--
-{
- "data": {
-  "labels": ["January"," February"," March"," April"," May"," June"," July"],
-  "datasets":[
-   {
-    "data":[65,59,80,81,56,55,40],
-    "label":"My first dataset","backgroundColor":"rgba(20,220,220,.8)"
-   },
-   {
-    "data":[28,48,40,19,86,27,90],
-    "label":"My second dataset","backgroundColor":"rgba(220,120,120,.8)"
-   }
-  ]
- }
-}
--->
-</canvas>
-
---
-
-#### Gitgraph Diagrams support
-
-```mermaid
-    gitGraph
-       commit
-       commit
-       branch develop
-       checkout develop
-       commit
-       commit
-       checkout main
-       merge develop
-       commit
-       commit
-    ```
-
-
---
-
-```mermaid
-mindmap
-  root((mindmap))
-    Origins
-      Long history
-      ::icon(fa fa-book)
-      Popularisation
-        British popular psychology author Tony Buzan
-    Research
-      On effectiveness<br/>and features
-      On Automatic creation
-        Uses
-            Creative techniques
-            Strategic planning
-            Argument mapping
-    Tools
-      Pen and paper
-      Mermaid
-```
---
-
-Kotlin poet basics 
-
-  
-
-Hello world example
-
-  
-
-Reflection. Metadata. Annotation processing
-
-  
-
-Testing
-
-  
-
-Maven/grade integration

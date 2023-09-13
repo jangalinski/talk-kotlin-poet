@@ -4,45 +4,36 @@
     "type": "split",
     "children": [
       {
-        "id": "aa7658f0757ed29c",
-        "type": "split",
+        "id": "59a07090ce180116",
+        "type": "tabs",
         "children": [
           {
-            "id": "59a07090ce180116",
-            "type": "tabs",
-            "dimension": 47.13983050847458,
-            "children": [
-              {
-                "id": "e256d8d28d265ae3",
-                "type": "leaf",
-                "state": {
-                  "type": "markdown",
-                  "state": {
-                    "file": "Kotlin Meta Programming.md",
-                    "mode": "source",
-                    "source": false
-                  }
-                }
+            "id": "e256d8d28d265ae3",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Kotlin Meta Programming.md",
+                "mode": "source",
+                "source": false
               }
-            ]
-          },
-          {
-            "id": "df7a3fdb068a29ac",
-            "type": "tabs",
-            "dimension": 52.86016949152542,
-            "children": [
-              {
-                "id": "9cc51bada0ae17a2",
-                "type": "leaf",
-                "state": {
-                  "type": "reveal-preview-view",
-                  "state": {}
-                }
-              }
-            ]
+            }
           }
-        ],
-        "direction": "horizontal"
+        ]
+      },
+      {
+        "id": "d4c8dd68108d98a0",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "29b3e72326854c54",
+            "type": "leaf",
+            "state": {
+              "type": "reveal-preview-view",
+              "state": {}
+            }
+          }
+        ]
       }
     ],
     "direction": "vertical"
@@ -172,22 +163,23 @@
   },
   "active": "e256d8d28d265ae3",
   "lastOpenFiles": [
+    "no understanding-small.jpg",
+    "no understanding.jpg.sb-e54d77f8-c5A6jV",
+    "no understanding.jpg",
+    "images/pie-yellow.svg",
+    "images/image - demo.svg",
+    "images/image - demo.png",
+    "images/also-yes-but-in-yellow.svg",
+    "Kotlin Meta Programming.md",
+    "Notes.md",
     "images/screenshot-kotlinpoet.png",
     "images/types-of-meta-programming.svg",
     "images/bg/kotlin-color-bg.svg",
     "images/kotlin-color-bg.svg",
     "images/mermaid-diagram-2023-09-12-225532.svg",
-    "Kotlin Meta Programming.md",
-    "images/mermaid-diagram-2023-09-12-225201.svg",
-    "images/jg-comic.svg",
-    "images/dinner-process.svg",
-    "images/c64-simon_ist_doof.svg",
     "images/bg-svg",
     "images/Neuer Ordner",
-    "images/Pasted image 20230911235040.png",
-    "images/bg/c64-empty.svg",
     "images/bg",
-    "Notes.md",
     "images/spicy",
     "images"
   ]
