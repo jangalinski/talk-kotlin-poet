@@ -6,7 +6,7 @@ transition: slide
 ---
 <!-- slide bg="[[code-talks-start.png]]" -->
 
-Jan Galinski
+Jan Galinski @ Holisticon AG
 <br/>
 ## Code Generation with Kotlin Poet
 
@@ -34,6 +34,11 @@ note:
 ChatGPT powered "what to cook for dinner?" process <!-- element class="fragment" -->
 
 <small>https://github.com/holunda-io/camunda-8-connector-gpt</small> <!-- element class="fragment" -->
+
+<grid drop="top" >
+![[kitchen-robot.svg]]
+</grid> <!-- element class="fragment" -->
+ 
 
 note: girls and boys day 
 - fuck
@@ -239,7 +244,7 @@ note:
 
 
 --
-<!-- slide bg="[[screenshot-kotlinpoet.png]]" -->
+<!-- slide bg="[[kotlinpoetslide.png]]" -->
 
 <grid  bg="orange">
 ## Kotlin Poet

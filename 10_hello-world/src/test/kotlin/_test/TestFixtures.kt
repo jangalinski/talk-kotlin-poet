@@ -1,12 +1,9 @@
 package io.github.jangalinski.talks._test
 
-import com.github.dtmo.jfiglet.FigFontResources
-import com.github.dtmo.jfiglet.FigletRenderer
 import com.squareup.kotlinpoet.FileSpec
 import com.tschuchort.compiletesting.KotlinCompilation
 import com.tschuchort.compiletesting.SourceFile
 import org.assertj.core.api.Assertions
-import org.jetbrains.kotlin.cli.common.arguments.K2JVMCompilerArguments
 import java.io.ByteArrayOutputStream
 import java.io.File
 import java.nio.file.Files

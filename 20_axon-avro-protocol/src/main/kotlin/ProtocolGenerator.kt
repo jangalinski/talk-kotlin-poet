@@ -13,6 +13,17 @@ import org.axonframework.queryhandling.QueryGateway
 import java.io.File
 import java.util.concurrent.CompletableFuture
 
+/**
+ *
+ * normal usage:
+ *
+ * val future : CompletableFuture<MyResultClass> = queryGateway
+ *   .query(
+ *      myQueryInstance,
+ *      ResponseTypes.instanceOf(MyResultClass::class.java)
+ *   )
+ *
+ */
 
 fun main() {
   val protocol = AvroHelper.CODE_TALKS_QUERIES
@@ -30,7 +41,7 @@ fun main() {
 
   val handler = queryHandlerInterface(message, request.first, responseList)
 
-  val client = queryGatewayExtensionFunction(request.first, response.first)
+  val client = queryGatewayExtensionFunction(request.first, response.first, message.name)
 
   val file = FileSpec.builder(protocol.namespace, protocol.name)
     .addType(request.second)
@@ -57,7 +68,7 @@ fun queryHandlerInterface(message: Message, queryType: ClassName, resultType: Ty
     )
     .build()
 
-fun queryGatewayExtensionFunction(queryType: ClassName, resultType: ClassName): FunSpec {
+fun queryGatewayExtensionFunction(queryType: ClassName, resultType: ClassName, name:String): FunSpec {
   val queryParameter = ParameterSpec.builder("query", queryType).build()
 
   val responseTypesClass = ResponseTypes::class.asClassName()
@@ -65,7 +76,7 @@ fun queryGatewayExtensionFunction(queryType: ClassName, resultType: ClassName): 
   val completableFuture = CompletableFuture::class.asTypeName()
     .parameterizedBy(List::class.asTypeName().parameterizedBy(resultType))
 
-  return FunSpec.builder("query")
+  return FunSpec.builder(name)
     .addKdoc(
       """
       @param query %T
@@ -86,6 +97,7 @@ fun queryGatewayExtensionFunction(queryType: ClassName, resultType: ClassName): 
 
 fun dataClassForRecordSchema(schema: Schema): Pair<ClassName, TypeSpec> {
   val className = ClassName(schema.namespace, schema.name)
+
 
   val parameters = schema.fields.map {
     ParameterSpec.builder(it.name(), AvroHelper.typeName(it.schema().type)).build()
