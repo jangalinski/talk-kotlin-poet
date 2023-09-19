@@ -6,6 +6,11 @@ Live coding examples for talk: Kotlin Meta Programming
 
 * [code talks 2023, 14./15.09.](https://codetalks.de/program)
 
+## Slides
+
+* reveal.js included, best run with obsidian/advanced slides
+* [slides-pdf](./Kotlin Meta Programming - Code Generation with Kotlin Poet.pdf)
+
 ## Useful
 
 * [reveal.js](https://revealjs.com/markdown/) - the slides framework
