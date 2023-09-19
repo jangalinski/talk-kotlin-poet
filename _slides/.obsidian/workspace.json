@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "59a07090ce180116",
+        "id": "4ec5b60e6435faa9",
         "type": "tabs",
         "children": [
           {
-            "id": "e256d8d28d265ae3",
+            "id": "d52e4a863e7d5202",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -17,20 +17,6 @@
                 "mode": "source",
                 "source": false
               }
-            }
-          }
-        ]
-      },
-      {
-        "id": "d4c8dd68108d98a0",
-        "type": "tabs",
-        "children": [
-          {
-            "id": "29b3e72326854c54",
-            "type": "leaf",
-            "state": {
-              "type": "reveal-preview-view",
-              "state": {}
             }
           }
         ]
@@ -161,30 +147,35 @@
       "obsidian-advanced-slides:Show Slide Preview": false
     }
   },
-  "active": "e256d8d28d265ae3",
+  "active": "d52e4a863e7d5202",
   "lastOpenFiles": [
-    "images/kitchen-robot.svg",
-    "images/kitchen-robot.png",
-    "Kotlin Meta Programming.md",
-    "images/cooking-station.pdf",
-    "images/kotlinpoetslide.png",
-    "images/Kotlin_logo.svg",
-    "images/no understanding-small.jpg",
-    "src/GenerateHelloWorldImplTest.kt",
-    "src/DynamicallyLoadGeneratedClassTest.kt",
-    "src",
-    "no understanding-small.jpg",
-    "no understanding.jpg.sb-e54d77f8-c5A6jV",
-    "no understanding.jpg",
     "images/pie-yellow.svg",
-    "images/image - demo.svg",
-    "images/image - demo.png",
-    "images/also-yes-but-in-yellow.svg",
-    "Notes.md",
     "images/bg-svg",
-    "images/Neuer Ordner",
-    "images/bg",
+    "images/spicy/no understanding.jpg",
     "images/spicy",
-    "images"
+    "export/Kotlin Meta Programming/plugin/chalkboard/README.md",
+    "export/Kotlin Meta Programming/plugin/chalkboard/_style.css",
+    "export/Kotlin Meta Programming/plugin/chalkboard/img/whiteboard.png",
+    "export/Kotlin Meta Programming/plugin/chalkboard/img/sponge.png",
+    "export/Kotlin Meta Programming/plugin/chalkboard/img/chalk-yellow.png",
+    "export/Kotlin Meta Programming/plugin/chalkboard/img/chalk-white.png",
+    "export/Kotlin Meta Programming/plugin/chalkboard/img/chalk-red.png",
+    "export/Kotlin Meta Programming/plugin/chalkboard/img/chalk-purple.png",
+    "export/Kotlin Meta Programming/plugin/chalkboard/img/chalk-orange.png",
+    "export/Kotlin Meta Programming/plugin/chalkboard/img/chalk-green.png",
+    "export/Kotlin Meta Programming/plugin/chalkboard/img/chalk-blue.png",
+    "export/Kotlin Meta Programming/plugin/chalkboard/img",
+    "export/Kotlin Meta Programming/plugin/chalkboard/style.css",
+    "export/Kotlin Meta Programming/plugin/chalkboard/plugin.js",
+    "export/Kotlin Meta Programming/plugin/chalkboard",
+    "export/Kotlin Meta Programming/plugin/chart/plugin.js",
+    "export/Kotlin Meta Programming/plugin/chart/chart.min.js",
+    "export/Kotlin Meta Programming/plugin/chart/README.md",
+    "export/Kotlin Meta Programming/plugin/chart",
+    "export/Kotlin Meta Programming/plugin/customcontrols/README.md",
+    "export/Kotlin Meta Programming/plugin/menu/README.md",
+    "export/Kotlin Meta Programming/plugin/menu/CONTRIBUTING.md",
+    "Kotlin Meta Programming.md",
+    "Notes.md"
   ]
 }

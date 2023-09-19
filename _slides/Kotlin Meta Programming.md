@@ -265,9 +265,13 @@ note:
 
 ## Kotlin Poet
 
+<small>
+
 > is a Kotlin and Java API for generating `.kt` source files. <br/>
 > Source file generation can be useful when doing things such as annotation processing or interacting with metadata files (e.g., database schemas, protocol formats). <br/>
 > By generating code, you eliminate the need to write boilerplate while also keeping a single source of truth for the metadata.
+
+</small>
 
 ---
 
