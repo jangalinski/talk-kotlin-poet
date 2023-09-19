@@ -9,7 +9,7 @@ Live coding examples for talk: Kotlin Meta Programming
 ## Slides
 
 * reveal.js included, best run with obsidian/advanced slides
-* [slides-pdf](./Kotlin Meta Programming - Code Generation with Kotlin Poet.pdf)
+* [slides-pdf](./Kotlin%20Meta%20Programming%20-%20Code%20Generation%20with%20Kotlin%20Poet.pdf)
 
 ## Useful
 
