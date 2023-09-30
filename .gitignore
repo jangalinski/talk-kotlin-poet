@@ -20,3 +20,5 @@ buildNumber.properties
 *.iml
 
 dist/
+
+_slides/.obsidian/workspace.json
